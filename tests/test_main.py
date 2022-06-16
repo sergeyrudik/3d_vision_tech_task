@@ -25,17 +25,6 @@ class TestMain(unittest.TestCase):
         self.assertTrue(result.endswith('...'))
         self.assertEqual(result, 'string longer than 25...')
 
-    def test_main_check_include_dots(self):
-        """
-        test string shorter than 25 characters and include dots at the end
-        """
-        test_string = 'string shorter than 25...'
-        result = main(article=test_string)
-
-        self.assertIsInstance(result, str)
-        self.assertTrue(result.endswith('...'))
-        self.assertEqual(result, test_string)
-
     def test_main_check_letter_or_not_space_at_the_end(self):
         """
         test string shorter than 25 characters and not space at the end
